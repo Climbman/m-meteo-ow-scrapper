@@ -6,20 +6,22 @@ import json
 import datetime
 
 import inserter
-import config_temp as config
+import config
 
-def reqToList():
+
+def req_to_list():
     
-    htmlRaw = requests.get(config._DATA_URL)
-    htmlParsed = BeautifulSoup(htmlRaw.text, 'html.parser')
-    jsonRaw = htmlParsed.find('div', attrs={'class':'json'}).text
-    json_list = json.loads(jsonRaw)
+    html_raw = requests.get(config._DATA_URL)
+    html_parsed = BeautifulSoup(html_raw.text, 'html.parser')
+    json_raw = html_parsed.find('div', attrs={'class': 'json'}).text
+    json_list = json.loads(json_raw)
 
     return json_list
 
-def prntList():
 
-    json_dict = reqToList()
+def prnt_list():
+
+    json_dict = req_to_list()
     i = 0
     print("\n")
     for x in json_dict:
@@ -32,7 +34,7 @@ def prntList():
 
 def prntNice(prnt=False, n=99):
 
-    json_dict = reqToList()
+    json_dict = req_to_list()
     length = len(json_dict)
     
     if not isinstance(n, int) or n < 0 or n > 24:
