@@ -2,4 +2,5 @@
 .env
 ow-scrapper/__pycache__
 ow-scrapper/resources/__pycache__
+*.pyc
 
