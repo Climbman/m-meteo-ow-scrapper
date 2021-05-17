@@ -1,0 +1,4 @@
+beautifulsoup4==4.8.2
+requests==2.22.0
+mysql-connector-python==8.0.25
+python-dotenv==0.17.1
