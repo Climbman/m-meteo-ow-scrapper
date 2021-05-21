@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker-compose exec ow-scrapper python -m ow-scrapper
+docker-compose exec -d ow-scrapper python -m ow-scrapper
